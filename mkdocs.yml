@@ -1,0 +1,93 @@
+site_name: Creator Flows Docs
+site_description: Manage all your social media content management and deadlines in one platform. 
+site_author: Creator Flows
+site_url: https://docs.creatorflows.com
+
+# repo_url: https://github.com/fanaanai
+# repo_name: fanaanai
+
+theme:
+  name: material
+  # logo: assets/logo.jpg
+  # favicon: assets/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - getting-started/create-account.md
+    - getting-started/quick-tour.md
+  - User Guide:
+    - user-guide/dashboard/overview.md
+    - user-guide/dashboard/menu.md
+    - user-guide/dashboard/metrics.md
+    - Projects:
+      - user-guide/projects/creating.md
+      - user-guide/projects/managing.md
+    - Uploading:
+      - user-guide/upload/settings.md
+      - user-guide/upload/results.md
+    - Review:
+      - user-guide/review/overview.md
+      - user-guide/review/viewing.md
+      - user-guide/review/comment.md
+      - user-guide/review/versions.md
+    - Account:
+      - user-guide/account/profile.md
+      - user-guide/account/billing.md
+      - user-guide/account/tokens.md
+      - user-guide/account/security.md
+  - Pricing:
+    - pricing/plans.md
+    - pricing/tokens.md
+    - pricing/billing.md
+  - Support:
+    - support/faq.md
+    - support/troubleshooting.md
+  - Legal:
+    - legal/terms.md
+    - legal/privacy.md
+    - legal/acceptable-use.md
