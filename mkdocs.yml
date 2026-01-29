@@ -65,15 +65,15 @@ nav:
     - user-guide/dashboard/menu.md
     - user-guide/dashboard/metrics.md
     - Projects:
-      - user-guide/projects/creating.md
-      - user-guide/projects/managing.md
+      - user-guide/contents/creating.md
+      - user-guide/contents/managing.md
     - Uploading:
       - user-guide/upload/settings.md
       - user-guide/upload/results.md
     - Review:
       - user-guide/review/overview.md
       - user-guide/review/viewing.md
-      - user-guide/review/comment.md
+      - user-guide/review/comments.md
       - user-guide/review/versions.md
     - Account:
       - user-guide/account/profile.md
@@ -87,6 +87,8 @@ nav:
   - Support:
     - support/faq.md
     - support/troubleshooting.md
+    - support/community.md
+    - support/contact.md
   - Legal:
     - legal/terms.md
     - legal/privacy.md
