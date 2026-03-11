@@ -1,0 +1,53 @@
+---
+title: Database Schema
+description: "The core data models and relationships in CreatorFlow."
+---
+
+## Core Database Models
+
+CreatorFlow uses Prisma as its ORM to interact with a PostgreSQL foundation (SupaBase).
+
+### User Model
+The User model stores profile information and authentication status.
+- `id`: Unique identifier (CUID)
+- `email`: User's professional email address
+- `name`: Full name
+- `avatarUrl`: URL to profile picture
+- `passwordHash`: Hashed password for security
+
+### Team Model
+The Team model represents a collaborative workspace.
+- `id`: Unique identifier (CUID)
+- `name`: Workspace name
+- `slug`: Unique team URL slug
+- `ownerId`: ID of the Team Lead who created it
+- `storageUsed`: Total storage currently in use
+- `storageLimit`: Maximum storage allowed (e.g., 5GB)
+
+### Project & Folder Models
+Projects and Folders are used to organize content assets.
+- `Project`: Contains multiple folders, files, and tasks.
+- `Folder`: Supports nested folder structures.
+
+### File & FileVersion Models
+The File model tracks individual assets and their versions.
+- `File`: Stores filename, path, mime type, size, and status.
+- `FileVersion`: Maintains a record of all revisions for a specific file.
+
+### Collaboration Models
+- `Comment`: Stores text and voice feedback, with support for timestamps and replies.
+- `CalendarEvent`: Tracks project deadlines, meetings, and shoots.
+
+### Enums
+We use enums for consistent data categorization:
+- **Role**: LEAD, EDITOR, DESIGNER, WRITER, SOCIAL_MANAGER, TALENT, VIEWER
+- **ProjectStatus**: PLANNING, ACTIVE, REVIEW, COMPLETED, ARCHIVED
+- **FileStatus**: DRAFT, IN_REVIEW, APPROVED, FINAL, ARCHIVED
+- **CommentType**: TEXT, VOICE, ANNOTATION
+- **EventType**: DEADLINE, MEETING, SHOOT, REVIEW, PUBLISH
+
+### Relationships
+- **Teams** have multiple **Members** (Users with Roles).
+- **Projects** belong to a **Team**.
+- **Files** are uploaded to a **Project** or **Folder**.
+- **Comments** and **Annotations** are associated with specific **Files**.

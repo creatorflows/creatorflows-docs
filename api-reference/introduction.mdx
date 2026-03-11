@@ -1,0 +1,35 @@
+---
+title: Introduction
+description: "Welcome to the CreatorFlow API documentation."
+---
+
+## Overview
+
+The CreatorFlow API is a REST-based API that allows you to programmatically interact with your workspaces, projects, and assets. All API responses are returned in standard JSON format.
+
+### Base URL
+All API requests should be made to the following base URL:
+`https://api.creatorflow.com/v1`
+
+### Authentication
+Most API endpoints require authentication using a JSON Web Token (JWT). You can obtain a token by registering or logging in through the `/auth` endpoints.
+
+Include the token in your request headers:
+`Authorization: Bearer <your_jwt_token>`
+
+### Rate Limiting
+To ensure platform stability, all API endpoints are protected with rate limiting. If you exceed the allowed number of requests, the API will return a `429 Too Many Requests` error.
+
+### Common Response Codes
+| Code | Description |
+| :--- | :--- |
+| **200 OK** | The request was successful. |
+| **201 Created** | A new resource was successfully created. |
+| **400 Bad Request**| The request was invalid or missing required parameters. |
+| **401 Unauthorized**| Authentication failed or the token is invalid. |
+| **403 Forbidden** | You do not have permission to access the resource. |
+| **404 Not Found** | The requested resource could not be found. |
+| **500 Internal Error**| Something went wrong on our end. |
+
+### SDKs & Libraries
+We are currently developing official SDKs for Node.js and Python. In the meantime, you can use any standard HTTP client to interact with our API.

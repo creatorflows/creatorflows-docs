@@ -1,0 +1,33 @@
+---
+title: System Architecture
+description: "A high-level overview of CreatorFlow's technical design."
+---
+
+## High-Level Architecture
+
+CreatorFlow is built as a modern, scalable web application following a microservices-inspired architecture for its core services.
+
+### Core Architecture Diagram
+- **Client Layer**: React/Next.js for the web app, with a mobile-responsive design and PWA capabilities.
+- **API Gateway**: Handles rate limiting, authentication, and request routing to backend services.
+- **Application Layer**: A collection of specialized services for Users, Teams, Projects, Files, Comments, and Notifications.
+- **Data Layer**: Powered by Supabase (PostgreSQL) for relational data and Cloudflare R2/AWS S3 for file storage.
+
+### System Components
+| Component | Responsibility |
+| :--- | :--- |
+| **User Service** | Auth, profiles, and account settings. |
+| **Team Service** | Workspace and member management. |
+| **File Service** | Upload/download, versioning, and metadata. |
+| **Comment Service** | Text/voice comments and annotations. |
+| **Notification Service** | Email, in-app, and push notifications. |
+| **Search Service** | Indexing and searching across files and comments. |
+
+### Data Flow
+1. **User Request**: A request is sent from the client to the API Gateway.
+2. **Authentication**: The gateway validates the JWT or OAuth session.
+3. **Service Logic**: The relevant microservice processes the request and interacts with the database or storage.
+4. **Data Sync**: Real-time updates are pushed to other team members via WebSockets.
+
+### Real-time Features
+We use WebSockets (Socket.io) to ensure all team members see live updates for comments, file uploads, and status changes.

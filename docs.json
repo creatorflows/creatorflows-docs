@@ -1,0 +1,80 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "CreatorFlow Docs",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "index",
+              "quickstart",
+              "user-roles"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/teams",
+              "features/files",
+              "features/collaboration",
+              "features/calendar"
+            ]
+          },
+          {
+            "group": "Advanced Features",
+            "pages": [
+              "features/ai-captions",
+              "features/annotations"
+            ]
+          },
+          {
+            "group": "Business & Growth",
+            "pages": [
+              "business/pricing",
+              "business/market",
+              "business/roadmap"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Architecture",
+        "groups": [
+          {
+            "group": "System Design",
+            "pages": [
+              "architecture/overview",
+              "architecture/tech-stack",
+              "architecture/database"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  }
+}

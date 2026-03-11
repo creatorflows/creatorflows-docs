@@ -1,0 +1,46 @@
+---
+title: User Roles & Access
+description: "Understand the permissions and responsibilities for each role in CreatorFlow."
+---
+
+## Role-Based Access Control (RBAC)
+
+CreatorFlow uses a robust RBAC system to ensure team members have the right access to the right content.
+
+### Predefined Roles
+
+| Role | Description | Key Permissions |
+| :--- | :--- | :--- |
+| **Team Lead** | Full administrative control | Create projects, manage members, full file operations. |
+| **Editor** | Post-production specialist | Upload/edit videos, comment, download, version control. |
+| **Designer** | Graphic/thumbnail creator | Upload designs, comment, download, version control. |
+| **Writer** | Script/content creator | Upload documents, edit text files, comment. |
+| **Social Manager**| Scheduler & publisher | Access final assets, download, manage calendar. |
+| **Talent** | On-camera personality | View scripts, view final videos, comment. |
+| **Viewer** | Client/Guest access | View only, no downloads (watermarked preview). |
+
+### Permission Matrix
+
+Understand what each role can do across the platform.
+
+| Action | Team Lead | Editor | Designer | Writer | Social Mgr | Talent | Viewer |
+| :--- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| Create Project | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Upload Video | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Upload Image | ✅ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ |
+| Upload Document | ✅ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ |
+| Download Original | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Download Compressed| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Preview in Browser | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Add Comment | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Delete File | ✅ | Own Only | Own Only | Own Only | ❌ | ❌ | ❌ |
+| Manage Calendar | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| Invite Members | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+
+### Custom Roles
+
+Team Leads can also create custom roles with specific permission sets to match unique team workflows.
+
+### Permission Scope
+
+Permissions can be set at the workspace, project, or even file level. File-level permissions override broader settings when specified.

@@ -1,0 +1,35 @@
+---
+title: Technology Stack
+description: "The tools and technologies used to build CreatorFlow."
+---
+
+## Tech Stack Overview
+
+CreatorFlow is built with modern, performant technologies chosen for their scalability and developer experience.
+
+### Frontend
+- **Angular**: Enterprise-grade structure with TypeScript, RxJS, and a powerful CLI.
+- **Mobile**: Progressive Web App (PWA) with a single codebase and offline capabilities.
+- **Styling**: Tailwind CSS + shadcn/ui for rapid UI development and a consistent design system.
+- **State Management**: Zustand + React Query for lightweight, performant server-state sync.
+
+### Backend
+- **Node.js + Express (TypeScript)**: Scalable, asynchronous JavaScript throughout the entire stack.
+- **API Gateway**: Handles authentication, rate limiting, and request routing.
+- **Microservices**: Specialized services for core platform functionality.
+
+### Data & Storage
+- **SupaBase (PostgreSQL)**: Foundation for relational data with built-in Auth and Row-Level Security (RLS).
+- **Prisma (ORM)**: Type-safe database queries and automated migrations.
+- **Cloudflare R2 / AWS S3**: S3-compatible, cost-effective storage with global CDN integration.
+- **Redis (Upstash)**: High-performance caching for session management and rate limiting.
+
+### Real-time & Queueing
+- **WebSockets (Socket.io)**: Bidirectional communication for live updates.
+- **BullMQ + Redis**: Background job processing for file processing and notifications.
+- **Meilisearch**: Fast, full-text search across all platform content.
+
+### Infrastructure
+- **Vercel**: Seamless frontend deployment and hosting.
+- **Railway**: Scalable backend hosting with simplified DevOps.
+- **Sentry**: Real-time error tracking and performance monitoring.

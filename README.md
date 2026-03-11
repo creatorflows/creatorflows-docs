@@ -1,60 +1,55 @@
-# local dev environment, make sure python 3.10+ is installed
+# Mintlify Starter Kit
 
-### create virtual environment
+Use the starter kit to get your docs deployed and ready to customize.
 
-```py
-python3 -m venv venv
-# or 
-python -m venv venv
-```
+Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
 
-### activate the virtual environment
+- Guide pages
+- Navigation
+- Customizations
+- API reference pages
+- Use of popular components
 
-macOS/Linux:
+**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
 
-```bash
-source venv/bin/activate
-```
+## AI-assisted writing
 
-Windows (Command Prompt):
-
-```shell
-.\\venv\\Scripts\\activate.bat
-```
-
-Windows (PowerShell):
-
-```shell
-.\\venv\\Scripts\\Activate.ps1
-```
-
-## after that make sure you are inside (venv) in terminal, then
-
-### 1 install requirements using
+Set up your AI coding tool to work with Mintlify:
 
 ```bash
-pip install -r requirements.txt
+npx skills add https://mintlify.com/docs
 ```
 
-### 2 run docs using
+This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
 
-```bash
-mkdocs serve
-```
+See the [AI tools guides](/ai-tools) for tool-specific setup.
 
-## quick utility commands
+## Development
 
-to clean up __pycache__, make sure to stage ur changes before running the command
-
-```bash
-find . -name "__pycache__" -type d -exec rm -r {} +
+Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
 
 ```
-
-to exit the virtual environment, simply run:
-
-```bash
-deactivate
+npm i -g mint
 ```
 
-the terminal prompt will return to its normal state.
+Run the following command at the root of your documentation, where your `docs.json` is located:
+
+```
+mint dev
+```
+
+View your local preview at `http://localhost:3000`.
+
+## Publishing changes
+
+Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+
+## Need help?
+
+### Troubleshooting
+
+- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
+- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+
+### Resources
+- [Mintlify documentation](https://mintlify.com/docs)
